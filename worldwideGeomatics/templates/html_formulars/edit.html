@@ -1,0 +1,32 @@
+        <section id="edit_section" class="form_section"> <!-- Section with the buttons for editing -->
+            <h1>
+                Editing Options
+            </h1>
+            <form name="edit_form" id="edit_form" class="edit_form"> <!-- Formular to edit incidents -->
+                <input type="hidden" name="name_form" id="name_form" value="edit_form"/>
+
+                <div>
+                    <button type="button" id="modify" class="button"> EDIT </button> <!-- button: Edit -->
+                    <button type="button" id="delete" class="button"> DELETE </button><br><br> <!-- button: Delete -->
+                    <button type="button" id="update" class="button" onclick="send_form(this.form)"> UPDATE </button> <!-- First button: Update -->
+                    <input type="checkbox" class="checkbox" name="solved" value="solved"> Solved</br></br>
+                    <label for="id" class="id_label">ID:</label>
+                    <input type="text" name="id" id="id" maxlength="4" value="1" disabled></br></br>
+
+                    <label for="type" class="type_label">Type of Incident:</label></br>
+                    <select name="type" id="type" required> <!-- ***************Introduce OnChange******************** -->
+                        <option value="none">Select a type of Incident</option>
+                        <option value="break_bank">Bank Broken</option>
+                        <option value="shit_rubish">Rubish on the street</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="desc" class="desc_label">Description:</label></br>
+                    <textarea rows="4" cols="50" name="desc" id="desc" placeholder="Explain us the incident..."></textarea></br>
+
+                    <label for="img" class="img">Image:</label></br>
+                    <button type="button" id="img" class="img_bttn">Search</button>
+                    <input type="text" name="img" id="img" maxlength="100" placeholder="No image selected..." >
+                </div>
+            </form>
+        </section>

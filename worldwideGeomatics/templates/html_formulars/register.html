@@ -1,0 +1,70 @@
+        <section id="register_section" class="form_section"> <!-- Section with the buttons for register -->
+            <h1>
+                Registration
+            </h1>
+            <form name="register_form" id="register_form" class="register_form" method="get"> <!-- Formular to register -->
+                <input type="hidden" name="name_form" id="name_form" value="register_form"/>
+
+                <div>
+                    <label for="name" class="name_label">Name:</label><br>
+                    <input type="text" name="name" id="name" maxlength="50" placeholder="Jesus" required></br>
+
+                    <label for="surname" class="surname_label">Surname:</label>
+                    <input type="text" name="surname" id="surname" maxlength="50" placeholder="Christ" required></br>
+
+                    <label for="birth" class="birth_label">Birth Date:</label>
+                    <input type="date" name="birth" id="birth" min="1950-01-01" max="2016-11-23" required></br>
+
+                    <label for="country" class="country_label">Country of Origin:</label>
+                    <input list="countries" name="country" id="country" required>
+                    <datalist id="countries">
+                        <option value="Germany">
+                        <option value="Spain">
+                        <option value="South Africa">
+                    </datalist></br>
+
+                    <fieldset>
+                        <legend>Sex:</legend>
+                        <input type="radio" name="gender" value="female">
+                        <label for="female" class="sex"> Female</label></br>
+                        <input type="radio" name="gender" value="male">
+                        <label for="male" class="sex"> Male</label><br>
+                        <input type="radio" name="gender" value="other">
+                        <label for="other" class="sex"> Other</label><br>
+                    </fieldset><br>
+
+                    <label for="pc" class="pc_label">Postal Code:</label>
+                    <input type="number" name="pc" id="pc" maxlength="5" placeholder="76344" required><br>
+                </div>
+                <div>
+                    <label for="tel" class="tel_label">Phone Number:</label></br>
+                    <input type="tel" pattern="[\+][\(]\d{2}[\)]\d{3}\d{3}\d{3}" title="Phone Number (Format: +(99)999999999)" placeholder=" +(99)999999999"></br>
+
+                    <label for="mail">E-mail:</label><br>
+                    <input type="email" name="mail" placeholder="example@gmail.com" required><br>
+
+                    <label for="user">User Name:</label><br>
+                    <input type="text" name="user" id="user" pattern="^[a-zA-Z]{6,15}$" title="Only Characters. Min 6, Max 15" placeholder="Only characters. Minimum 6, Maximum 15" required><br>
+
+                    <label for="pass">Password:</label><br>
+                    <input type="password" name="pass" id="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,10}$" placeholder="Min 6, Max 10, lower and upper case and number" required><br><br>
+
+                    <label for="sector">Working Sector:</label><br>
+                    <input class="checkbox" type="checkbox" name="sector" value="student">
+                    <label for="student" class="sector"> Student</label><br>
+                    <input class="checkbox" type="checkbox" name="sector" value="construction">
+                    <label for="construction" class="sector"> Construction</label><br>
+                    <input class="checkbox" type="checkbox" name="sector" value="public">
+                    <label for="public" class="sector"> Public Sector</label><br>
+                    <input class="checkbox" type="checkbox" name="sector" value="engineering">
+                    <label for="engineering" class="sector"> Engineering</label><br>
+                    <label for="other" class="sector">Other:  </label>
+                    <input class="other" type="text" name="sector" placeholder="Please, specify"><br>
+                    <!-- Terms of Use -->
+                    <input class="checkbox" type="checkbox" name="terms" value="terms" required>
+                    <label for="terms" class="terms"> I accept the </label>
+                    <a class="terms" href="http://localhost/desweb/worldwideGeomatics/templates/html_sections/terms.html" target="_blank">terms of use</a>
+                </div>
+            </form>
+            <center><button type="button" id="register_bttn" class="register_bttn">Register</button></center>
+        </section>

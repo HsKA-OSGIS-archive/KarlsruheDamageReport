@@ -1,0 +1,35 @@
+        <section id="create_section" class="form_section"> <!-- Section with the buttons for create new incidents -->
+            <h1>
+                Create a new Incident
+            </h1>
+            
+            <form name="create_form" id="create_form" class="create_form"> <!-- Formular to create a new incident -->
+                <input type="hidden" name="name_form" id="name_form" value="create_form"/>
+
+                <div id="left" class="btn-group btn-group-sm">
+                    <button type="button" id="point" class="button"> POINT </button> <!-- button: Point -->
+                    <button type="button" id="line" class="button"> LINE </button> <!-- button: Line -->
+                    <button type="button" id="polygon" class="button"> POLYGON </button></br> <!-- button: Polygon -->
+                    <button type="button" id="modify" class="button"> EDIT </button> <!-- button: Edit -->
+                    <button type="button" id="delete" class="button"> DELETE </button><br><br> <!-- button: Delete -->
+                    <label for="id" class="id_label">ID:</label>
+                    <input type="text" name="id" id="id" maxlength="4" value="1" disabled></br></br>
+
+                    <label for="type" class="type_label">Type of Incident:</label></br>
+                    <select name="type" id="type" required> <!-- ***************Introduce OnChange******************** -->
+                        <option value="none">Select a type of Incident</option>
+                        <option value="break_bank">Bank Broken</option>
+                        <option value="shit_rubish">Rubish on the street</option>
+                    </select>
+                </div>
+                <div id="right" class="right">
+                    <label for="desc" class="desc_label">Description:</label></br>
+                    <textarea rows="4" cols="50" name="desc" id="desc" placeholder="Explain us the incident..."></textarea></br>
+
+                    <label for="img" class="img">Image:</label></br>
+                    <button type="button" id="img" class="img_bttn">Search</button>
+                    <input type="text" name="img" id="img" maxlength="100" placeholder="No image selected..." ><br><br>
+                    <button type="button" id="create" class="button_create" onclick="send_form(this.form)"> CREATE </button> <!-- button: Create -->
+                </div><br>
+            </form>
+        </section>

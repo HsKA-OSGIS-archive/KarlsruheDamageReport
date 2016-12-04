@@ -1,0 +1,15 @@
+        <section id="login_section" class="form_section"> <!-- Section with the buttons for register -->
+            <h1>
+                Login
+            </h1>
+            <form name="login_form" id="login_form" class="login_form"> <!-- Formular to register -->
+                <input type="hidden" name="name_form" id="name_form" value="login_form"/>
+
+                <label for="user">User Name:</label><br>
+                <input type="text" name="user" id="user" placeholder="Insert your user name" required><br>
+
+                <label for="pass">Password:</label><br>
+                <input type="password" name="pass" id="pass" placeholder="Insert your password" required><br><br>
+                <center><button type="button" id="login_bttn" class="login_bttn" onclick="send_login(this.form)">Login</button></center>
+            </form> 
+        </section>
