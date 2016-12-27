@@ -1,0 +1,31 @@
+        <section id="search_section" class="form_section"> <!-- Section with the buttons for create new incidents -->
+            <h1>
+                Search for stored incidents
+            </h1>
+            
+            <form name="search_form" id="search_form" class="search_form"> <!-- Formular to create a new incident -->
+                <input type="hidden" name="name_form" id="name_form" value="search_form"/>
+                <input type="hidden" name="type-form" id="type-form" value=""/>
+                
+                <label for="geom" class="geom_label">Geometry: </label>
+                <select name="geom" id="geom" onchange="find_geometry(value, this.form);reset_form(this.form)">
+                    <option value="none">Select a type of Geometry</option>
+                    <option value="POINT">POINT</option>
+                    <option value="LINE">LINE</option>
+                    <option value="POLYGON">POLYGON</option>
+                </select>
+                
+                <label for="incident_type" class="type_label">Type of Incident:</label>
+                <select name="incident_type" id="incident_type" onchange="find_type(value, this.form);reset_form(this.form)">
+                </select>
+
+                <label for="id" class="id_label">ID:</label>
+                <input type="number" name="id" id="id" maxlength="4" onchange="reset_form(this.form)"><br>
+
+                <button type="button" id="search" class="button_search" onclick="button_search(this.form)"> SEARCH </button> <!-- button: Search -->
+                <select id="final_id" class="final_id" name="final_id" required>
+                   <option value="iniciated">Select an ID or press SEARCH</option>
+                </select>
+
+            </form>
+        </section>

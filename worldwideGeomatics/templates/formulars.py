@@ -11,6 +11,15 @@ import os
 
 dir_base=os.path.dirname(__file__) #path to current file
 
+def create_search():
+    """
+    Function to create the search formular
+    """
+    file_name=dir_base+"/html_formulars/search.html"
+    search=worldwide.wwfunctions.read_file(file_name)
+    
+    return search
+
 def create_create():
     """
     Function to create the create formular

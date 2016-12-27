@@ -38,10 +38,10 @@
                 </div>
                 <div>
                     <label for="tel" class="tel_label">Phone Number:</label></br>
-                    <input type="tel" pattern="[\+][\(]\d{2}[\)]\d{3}\d{3}\d{3}" title="Phone Number (Format: +(99)999999999)" placeholder=" +(99)999999999"></br>
+                    <input type="tel" name="tel" id="tel" pattern="[\+][\(]\d{2}[\)]\d{3}\d{3}\d{3}" title="Phone Number (Format: +(99)999999999)" placeholder=" +(99)999999999"></br>
 
                     <label for="mail">E-mail:</label><br>
-                    <input type="email" name="mail" placeholder="example@gmail.com" required><br>
+                    <input type="email" name="mail" id="mail" placeholder="example@gmail.com" required><br>
 
                     <label for="user">User Name:</label><br>
                     <input type="text" name="user" id="user" pattern="^[a-zA-Z]{6,15}$" title="Only Characters. Min 6, Max 15" placeholder="Only characters. Minimum 6, Maximum 15" required><br>
@@ -50,21 +50,22 @@
                     <input type="password" name="pass" id="pass" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{6,10}$" placeholder="Min 6, Max 10, lower and upper case and number" required><br><br>
 
                     <label for="sector">Working Sector:</label><br>
-                    <input class="checkbox" type="checkbox" name="sector" value="student">
+                    <input class="checkbox" type="checkbox" name="sector" id="sector" value="student">
                     <label for="student" class="sector"> Student</label><br>
-                    <input class="checkbox" type="checkbox" name="sector" value="construction">
+                    <input class="checkbox" type="checkbox" name="sector" id="sector" value="construction">
                     <label for="construction" class="sector"> Construction</label><br>
-                    <input class="checkbox" type="checkbox" name="sector" value="public">
+                    <input class="checkbox" type="checkbox" name="sector" id="sector" value="public">
                     <label for="public" class="sector"> Public Sector</label><br>
-                    <input class="checkbox" type="checkbox" name="sector" value="engineering">
+                    <input class="checkbox" type="checkbox" name="sector" id="sector" value="engineering">
                     <label for="engineering" class="sector"> Engineering</label><br>
                     <label for="other" class="sector">Other:  </label>
-                    <input class="other" type="text" name="sector" placeholder="Please, specify"><br>
+                    <input class="other" type="text" name="sector" id="sector" placeholder="Please, specify"><br>
+                    
                     <!-- Terms of Use -->
-                    <input class="checkbox" type="checkbox" name="terms" value="terms" required>
+                    <input class="checkbox" type="checkbox" name="terms" id="terms" value="acepted" required>
                     <label for="terms" class="terms"> I accept the </label>
                     <a class="terms" href="http://localhost/desweb/worldwideGeomatics/templates/html_sections/terms.html" target="_blank">terms of use</a>
                 </div>
+                <center><button type="button" id="register_bttn" class="register_bttn" onclick="send_register(this.form)">Register</button></center>
             </form>
-            <center><button type="button" id="register_bttn" class="register_bttn">Register</button></center>
         </section>

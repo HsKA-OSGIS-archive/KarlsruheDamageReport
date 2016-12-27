@@ -7,11 +7,11 @@
                 <input type="hidden" name="name_form" id="name_form" value="create_form"/>
 
                 <div id="left" class="btn-group btn-group-sm">
-                    <button type="button" id="point" class="button"> POINT </button> <!-- button: Point -->
-                    <button type="button" id="line" class="button"> LINE </button> <!-- button: Line -->
-                    <button type="button" id="polygon" class="button"> POLYGON </button></br> <!-- button: Polygon -->
-                    <button type="button" id="modify" class="button"> EDIT </button> <!-- button: Edit -->
-                    <button type="button" id="delete" class="button"> DELETE </button><br><br> <!-- button: Delete -->
+                    <button type="button" id="drawPoint" class="button" onclick="olHelper.dpoint()"> POINT </button> <!-- button: Point -->
+                    <button type="button" id="line" class="button" onclick="olHelper.dline()"> LINE </button> <!-- button: Line -->
+                    <button type="button" id="polygon" class="button" onclick="olHelper.dpolygon()"> POLYGON </button></br> <!-- button: Polygon -->
+                    <button type="button" id="modify" class="button" onclick="olHelper.modify()"> EDIT </button> <!-- button: Edit -->
+                    <button type="button" id="delete" class="button" onclick="olHelper.del()"> DELETE </button><br><br> <!-- button: Delete -->
                     <label for="id" class="id_label">ID:</label>
                     <input type="text" name="id" id="id" maxlength="4" value="1" disabled></br></br>
 

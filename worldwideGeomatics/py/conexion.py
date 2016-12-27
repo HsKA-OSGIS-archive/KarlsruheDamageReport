@@ -23,14 +23,10 @@ class Conexion():
     conn=None
     user_type=None
     
-    def __init__(self, user, password):
+    def __init__(self, user, password, type):
         #Check which user is
-        if user == "rinkamika" and password=="rinkamika":
+        if user!="" and password!="" and type!="":
             self.conn=True
-            self.user_type="administrator"
-        elif user == "adcasmar" and password=="adcasmar":
-            self.conn=True
-            self.user_type="editor"
         else:
             self.conn=False
             
@@ -38,6 +34,7 @@ class Conexion():
         if self.conn:           
             self.user=user
             self.password=password
+            self.user_type=type
         else:
             self.user_type= False
             self.user= False
@@ -54,11 +51,11 @@ def keep_session_variables(oSession, oConexion):
 #it loggin with them
 def check_session(oSession):
     if oSession.has_key("user") and oSession.has_key("password"):
-        oConexion=Conexion(oSession["user"], oSession["password"])
+        oConexion=Conexion(oSession["user"], oSession["password"], oSession["user_type"])
     else:
-        oConexion=Conexion("", "")        
+        oConexion=Conexion("", "", "")        
     return oConexion
 
 def logout(oSession):
     oSession.delete()
-    #oSession.invalidate()
+    oSession.invalidate()

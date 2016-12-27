@@ -5,12 +5,10 @@ Created on 26/11/2016
 
 @author: Worldwide Geomatics
 '''
-
 from worldwide import wwfunctions
 from templates import templates
 from templates import formulars
-from templates.templates import start_general_section, create_map, create_table,\
-    close_general_section
+from templates.templates import start_general_section, create_map, create_section_table, close_general_section
 from py import conexion
 
 def process_menu_option(environ, oConnexion):
@@ -36,38 +34,48 @@ def process_menu_option(environ, oConnexion):
         Returns the home page
         """
         start_general=start_general_section()
-        table=create_table()
+        search=formulars.create_search()
+        tables="""
+            <section id='tables' class='tables' style="display:none;"></section>
+            """
         close_general=close_general_section()
-        html=start_general+table+close_general
+        html=start_general+search+tables+close_general
         
     elif application=="create":
         """
         Returns the create page
         """
         
-        if oConnexion.conn:
+        if oConnexion.conn==True:
             start_general=start_general_section()
             create=formulars.create_create()
-            table=create_table()
+            tables="""
+            <section id='tables' class='tables' style="display:none;"></section>
+            """
             close_general=close_general_section()
-            html=start_general+create+table+close_general
-        else:
+            html=start_general+create+tables+close_general
+        elif oConnexion.conn==False:
             tit="<h1>You have to be logged to access this section</h1>"
             start_general=start_general_section()
             login=formulars.create_login()
             close_general=close_general_section()
             html=start_general+tit+login+close_general
+        else:
+            html='<section id="general_section"><h1>You have to be logged to access this section</h1></section>'
+        
         
     elif application=="editing":
         """
         Returns the edit page
         """
-        if oConnexion.user_type=="administrator":
+        if oConnexion.user_type=="Administrator":
             start_general=start_general_section()
             edit=formulars.create_edit()
-            table=create_table()
+            tables="""
+            <section id='tables' class='tables' style="display:none;"></section>
+            """
             close_general=close_general_section()
-            html=start_general+edit+table+close_general
+            html=start_general+edit+tables+close_general
             
         elif oConnexion.conn==False:
             tit="<h1>You have to be logged as Administrator to access this section</h1>"
