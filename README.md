@@ -64,3 +64,6 @@ Repo for Worldwide Geomatics
 3º Restore the database created with "karlsruhedamagereport.backup". You can find this file in our configuration_help folder located in our github.
 
 ********************* GEOSERVER ************************ 
+1º - Copy content of Styles folder in Geoserver, which contains the icons in png format and custom patterns for the polygons
+
+2º - Copy the KarlsruheDamageReport folder inside your Geoserver/data_dir/workspaces
