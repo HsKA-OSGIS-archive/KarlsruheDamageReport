@@ -282,6 +282,9 @@ function generate_incidents(data) {
 		
 		document.getElementById('incident_type').innerHTML=options;
 	}
+	if (response.geom_type=='null'){
+		document.getElementById('incident_type').innerHTML=options;
+	}
 	if (response.last_id!='null'){
 		var current_id=parseInt(response.last_id)+parseInt(1);
 		document.getElementById('id').value=current_id;
