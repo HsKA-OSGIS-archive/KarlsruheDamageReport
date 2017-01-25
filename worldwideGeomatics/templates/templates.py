@@ -66,6 +66,15 @@ def create_section_polygons():
     
     return polygons_sec
 
+def create_section_manual():
+    """
+    Creates the manual section
+    """
+    file_name=dir_base+"/html_sections/manual.html"
+    manual_sec=worldwide.wwfunctions.read_file(file_name)
+    
+    return manual_sec
+
 def create_section_table(table_points=None, table_lines=None, table_polygons=None):
     """
     Creates the table, replacing a dictionary with the table on the html
@@ -166,10 +175,10 @@ def create_complete_page(draw_map=False, draw_search=False, html_ins=None):
     close_general=close_general_section()
     aside=create_aside()
     footer=create_footer()
-    html=head+header+map_sec+start_general+section+search+tables+close_general+aside+footer 
+    html=head+header+map_sec+aside+start_general+section+search+tables+close_general+footer 
     return html
 
-def create_table(list_values):
+def create_table(list_values, id_table):
     """
     This function creates a table in html from a list of values
     """
@@ -184,7 +193,7 @@ def create_table(list_values):
     <tbody>\n
     """
     for row in list_values:
-        table+='<tr>\n'
+        table+='<tr onclick=click_table("'+str(row[0])+'","'+id_table+'")>\n'
         for value in range(0, len(row)):
             table+="<td>"+str(row[value])+"</td>\n"    #for to create each value of each object/attribute (row) of the table
         table+="</tr>\n"

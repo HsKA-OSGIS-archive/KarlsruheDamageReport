@@ -1,0 +1,666 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+h1 {
+	font: bold 24px verdana, sans-serif;
+	margin-top: 20px;
+	margin-left: 2%;
+}
+
+header, section, aside, footer, nav, figure {
+	display: block;
+}
+
+/***************** HEADER *******************/
+header {
+	position: relative;
+	height: 250px;
+	width: 100%;
+	padding-right: 2%;
+	background-image: url('../img/background_without.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	border-radius: 1em;
+	color: #fff;
+}
+
+header h1 {
+	font: bold 42px verdana, sans-serif;
+	padding-top: 70px;
+	display: block;
+	position: relative;
+	text-align: center;
+	border: 1px;
+	text-shadow: -3px -3px 3px #000, 3px 3px 3px #000, -3px 3px 3px #000, 3px -3px 3px #000;
+}
+
+header nav {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-shadow: 2px 2px #000;
+}
+
+header nav ul {
+	border-radius: 1em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	font: bold 14px verdana,sans-serif;
+}
+
+header nav li {
+	float: left;
+	border-right: 1px solid #bbb;
+	font: bold 14px verdana,sans-serif;
+}
+
+header nav li:last-child {
+	border-right: none;
+}
+
+header nav li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	transition: 2s;
+}
+
+header nav li:hover:not(.active) {
+	background-color: #111;
+}
+
+.active {
+	background-color: #9B0228;
+}
+
+#submenu {
+	float: right;
+}
+
+.secondarylist {
+	display: none;
+	position: absolute;
+	background-color: #F9F9F9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.secondarylist a:hover {
+	background-color: #F1F1F1;
+}
+
+#login_li:hover .secondarylist, #about_li:hover .secondarylist {
+	display: block;
+}
+
+.logout {
+	display: none;
+}
+
+/********************* BODY ************************/
+body {
+	border-radius: 1em;
+	background-color: #E6E6E6;
+	padding-left: 5%;
+	padding-right: 5%;
+	float: left;
+	width: 90%;
+	box-shadow: 0px 3px 10px #B5C1C5, 0 0 0 0px #EEF5F7 inset;
+}
+
+/******************** MAP **********************/
+.sec_map {
+	border-radius: 1em;
+	background-color: #E6E6E6;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	float: left;
+	width: 75%;
+	height: 500px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	box-shadow: 0px 3px 10px #b5c1c5, 0 0 0 0px #EEF5F7 inset;
+}
+
+.map {
+	padding: 20px;
+	height: 400px;
+}
+
+/********************* TABLE ***************************/
+.tables {
+	border-radius: 1em;
+	background-color: #E6E6E6;
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 1%;
+	float: left;
+	width: 100%;
+	margin-bottom: 25px;
+	box-shadow: 0px 3px 10px #B5C1C5, 0 0 0 0px #EEF5F7 inset;
+}
+
+table {
+	margin-top: 20px;
+	width: 100%;
+}
+
+table th, td {
+	text-align: center;
+	padding: 10px;
+}
+
+tbody tr {
+	background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #dfc5cc;
+}
+
+table th {
+	background-color: #9B0228;
+	color: white;
+}
+
+table th:first-child {
+	border-radius: 1em 0 0 0;
+}
+
+table th:last-child {
+	border-radius: 0 1em 0 0;
+}
+
+table tr:last-child td:first-child {
+	border-radius: 0 0 0 1em;
+}
+
+table tr:last-child td:last-child {
+	border-radius: 0 0 1em 0;
+}
+
+table tr:hover {
+	background-color: #D8F6CE;
+}
+
+table tr:active {
+	background-color: #bcf0aa;
+	transform: translateY(2px);
+}
+
+/******************** ASIDE ************************/
+aside {
+	display: inline-block;
+	border-radius: 1em;
+	padding-left: 0.5%;
+    padding-right: 0.5%;
+    float: right;
+    width: 22%;
+    height: 500px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    margin-left: 1%;
+	background: #E6E6E6;
+	box-shadow: 0px 3px 10px #b5c1c5, 0 0 0 0px #d5d1e8 inset;
+}
+
+aside h1 {
+	font: bold 22px verdana, sans-serif;
+	text-align: center;
+}
+
+aside h2 {
+    font: bold 16px verdana, sans-serif;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.legend_left {
+	float: left;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-right: 10%;
+}
+
+.legend_right {
+    float: left;
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 1%;
+}
+
+aside ul {
+	list-style-type: none;
+	font: bold 14px verdana, sans-serif;
+}
+
+/* unvisited link */
+aside ul li a:link {
+	color: red;
+	text-decoration: none;
+}
+
+/* visited link */
+aside ul li a:visited {
+	color: green;
+	text-decoration: none;
+}
+
+/* mouse over link */
+aside ul li a:hover {
+	text-decoration: underline;
+}
+
+/* selected link */
+aside ul li a:active {
+	color: blue;
+	text-decoration: underline;
+}
+
+/************************ FOOTER ****************************/
+footer {
+    clear: both; /*very important*/
+    /* for capital letters: text-transform: uppercase; */
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+    border-radius: 1em;
+    background: #d5d1e8;
+    box-shadow: 0px 3px 10px #b5c1c5, 0 0 0 0px #d5d1e8 inset;
+}
+
+footer .figure {
+    text-align: left;
+    width: 40%;
+}
+
+footer .info .web{
+    
+    list-style: none;
+    float: left;
+    padding-left: 30%;
+    padding-top: 3.5%;
+}
+footer .info .mail{
+    display: inline-block;
+    list-style: none;
+    float: right;
+    padding-right: 10%;
+    padding-top: 3.5%;
+}
+
+footer .logo {
+    width: 20%;
+    float: left;
+}
+
+
+.legend {
+	width:170px; /* you can use % */
+    height: auto;
+}
+
+/************************ FORMULAR STYLE *******************************/
+.form_section {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	border-radius: 1em;
+	background-color: #E6E6E6;
+	padding: 10px;
+	float: left;
+	width: 100%;
+	box-shadow: 0px 3px 10px #B5C1C5, 0 0 0 0px #EEF5F7 inset;
+}
+
+form {
+	margin-top: 10px;
+}
+
+form label, legend {
+	font: bold 18px verdana, sans-serif;
+}
+
+form input {
+	background-position: right;
+	background-repeat: no-repeat;
+	width: auto;
+	padding: 8px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	box-sizing: border-box;
+	background-position: 98%;
+}
+
+form input:hover {
+	border: 2px solid #77cddf;
+}
+
+form input:focus {
+	outline: none;
+	border: 2px solid #77cddf;
+}
+
+textarea {
+	width: 90%;
+	height: 100px;
+	padding: 12px 20px;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 1em;
+	background-color: #f8f8f8;
+	font-size: 16px;
+	resize: none;
+	margin: 8px 0;
+}
+
+textarea:hover {
+	border: 2px solid #77cddf;
+}
+
+textarea:focus {
+	outline: none;
+	border: 2px solid #77cddf;
+}
+
+form select {
+	background-position: right;
+	background-repeat: no-repeat;
+	width: 80%;
+	padding: 7px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	box-sizing: border-box;
+	background-position: 98%;
+}
+
+form select:hover {
+	border: 2px solid #77cddf;
+}
+
+form select:focus {
+	outline: none;
+	border: 2px solid #77cddf;
+}
+
+form input:invalid:required {
+	background-image: url(../img/mandatory.png);
+	background-size: 30px auto;
+}
+
+form input:focus:invalid {
+	background-image: url(../img/incorrect.png);
+	background-size: 25px auto;
+}
+form input:valid {
+	background-image: url(../img/valid.png);
+	background-size: 25px auto;
+}
+
+button {
+	display: inline-block;
+	padding: 7px 15px;
+	margin-top: 10px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	background-color: #9b0228;
+	border: none;
+	border-radius: 1em;
+	box-shadow: 0 3px #999;
+}
+
+button:hover {
+	background-color: #860223;
+}
+
+button:active {
+	background-color: #860223;
+	box-shadow: 0 1px #666;
+	transform: translateY(2px);
+}
+
+.img_bttn {
+	background-color: #E1043C;
+}
+
+form div {
+	width: 45%;
+	float: left;
+	padding-right: 5%;
+}
+
+#left {
+    width: 45%;
+    float: left;
+}
+
+#right {
+    width: 45%;
+    float: right;
+}
+
+.create_form button {
+    margin-left: 2%;
+    width: 120px;
+    text-align: center;
+}
+
+.button_create {
+    float: right;
+    margin-right: 5%;
+}
+
+.checkbox {
+	margin-left: 20px;
+	font: 18px verdana, sans-serif;
+}
+
+.img_input {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.img_input + label {
+    max-width: 80%;
+    font-size: 1vw;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+.no-js .img_input + label {
+    display: none;
+}
+
+.img_input + label,
+.img_input.has-focus + label {
+    /*outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;*/
+}
+
+.img_input + label * {
+    /*pointer-events: none;
+     in case of FastClick lib use */
+}
+
+.img_input + label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+.img_input + label {
+    color: #d3394c;
+}
+
+.img_input:focus + label,
+.img_input.has-focus + label,
+.img_input + label:hover {
+    color: #722040;
+}
+
+.img_input + label figure {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d3394c;
+    display: block;
+    padding: 20px;
+    margin: 0 auto 10px;
+}
+
+.img_input:focus + label figure,
+.img_input.has-focus + label figure,
+.img_input + label:hover figure {
+    background-color: #722040;
+}
+
+.img_input + label svg {
+    width: 100%;
+    height: 100%;
+    fill: #f1e5e6;
+}
+
+/**************** REGISTRATION FORM *********************/
+.register_form input {
+	background-position: right;
+	background-repeat: no-repeat;
+	width: 100%;
+	padding: 8px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	box-sizing: border-box;
+	background-position: 98%;
+}
+
+.register_form fieldset input, .register_form .checkbox, .register_form .other {
+	background-position: right;
+	background-repeat: no-repeat;
+	width: auto;
+	padding: 8px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 1em;
+	box-sizing: border-box;
+	background-position: 98%;
+}
+
+fieldset {
+	border-radius: 1em;
+	padding-left: 10px;
+}
+
+fieldset label, .sector {
+	font: 14px verdana, sans-serif;
+}
+
+.terms {
+	font: 14px verdana, sans-serif;
+}
+
+/************************* TERMS ********************************/
+.terms_section {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    border-radius: 1em;
+    background-color: #E6E6E6;
+    padding: 3%;
+    float: left;
+    width: 90%;
+    box-shadow: 0px 3px 10px #B5C1C5, 0 0 0 0px #EEF5F7 inset;
+}
+
+.indented {
+	padding-left: 20px;
+}
+
+.indented2 {
+	padding-left: 60px;
+}
+
+/************************** LOGIN *******************************/
+#login_section {
+	width: auto;
+	margin-left: 37%;
+}
+
+#login_section form input {
+	width: 400px;
+}
+
+/************************* SEARCH ******************************/
+.search_form {
+	margin-left: 30px;
+}
+.search_form input {
+	width: 150px;
+	margin-right: 20px;
+}
+
+.search_form select {
+	width: 250px;
+	margin-right: 20px;
+}
+
+.search_form .final_id {
+	display: none;
+}
+
+#final_id{
+    display: none;
+    width: 85%;
+    float: right;
+    background-image: none;
+    padding: 7px;
+    box-shadow: 0 3px #999;
+}
+
+#final_id:active {
+    box-shadow: 0 1px #666;
+    transform: translateY(2px);
+    border: none;
+    }
+
+#final_id:hover {
+    border: none;
+    }
+
+.error{
+    background-color: #DFC5CC;
+}
+.correct{
+    background-color: #D8F6CE;
+}

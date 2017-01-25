@@ -8,7 +8,7 @@
                 <input type="hidden" name="type-form" id="type-form" value=""/>
                 
                 <label for="geom" class="geom_label">Geometry: </label>
-                <select name="geom" id="geom" onchange="find_geometry(value, this.form);reset_form(this.form)">
+                <select name="geom" id="geom" onchange="send_geometry(this.form, 'geometry');reset_form(this.form)">
                     <option value="none">Select a type of Geometry</option>
                     <option value="POINT">POINT</option>
                     <option value="LINE">LINE</option>
@@ -16,7 +16,7 @@
                 </select>
                 
                 <label for="incident_type" class="type_label">Type of Incident:</label>
-                <select name="incident_type" id="incident_type" onchange="find_type(value, this.form);reset_form(this.form)">
+                <select name="incident_type" id="incident_type" onchange="zoom_type(this.form);reset_form(this.form)">
                 </select>
 
                 <label for="id" class="id_label">ID:</label>

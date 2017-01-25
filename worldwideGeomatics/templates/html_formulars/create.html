@@ -3,33 +3,33 @@
                 Create a new Incident
             </h1>
             
-            <form name="create_form" id="create_form" class="create_form"> <!-- Formular to create a new incident -->
+            <form name="create_form" id="create_form" class="create_form" enctype='multipart/form-data'> <!-- Formular to create a new incident -->
                 <input type="hidden" name="name_form" id="name_form" value="create_form"/>
+                <input type="hidden" name="type-form" id="type-form" value=""/>
+                <input type="hidden" name="type-geometry" id="type-geometry" value=""/>
 
                 <div id="left" class="btn-group btn-group-sm">
-                    <button type="button" id="drawPoint" class="button" onclick="olHelper.dpoint()"> POINT </button> <!-- button: Point -->
-                    <button type="button" id="line" class="button" onclick="olHelper.dline()"> LINE </button> <!-- button: Line -->
-                    <button type="button" id="polygon" class="button" onclick="olHelper.dpolygon()"> POLYGON </button></br> <!-- button: Polygon -->
+                    <button type="button" id="drawPoint" class="button" onclick="olHelper.dpoint();send_geometry(this.form, 'point')"> POINT </button> <!-- button: Point -->
+                    <button type="button" id="drawLine" class="button" onclick="olHelper.dline();send_geometry(this.form, 'line')"> LINE </button> <!-- button: Line -->
+                    <button type="button" id="drawPolygon" class="button" onclick="olHelper.dpolygon();send_geometry(this.form, 'polygon')"> POLYGON </button></br> <!-- button: Polygon -->
                     <button type="button" id="modify" class="button" onclick="olHelper.modify()"> EDIT </button> <!-- button: Edit -->
                     <button type="button" id="delete" class="button" onclick="olHelper.del()"> DELETE </button><br><br> <!-- button: Delete -->
                     <label for="id" class="id_label">ID:</label>
                     <input type="text" name="id" id="id" maxlength="4" value="1" disabled></br></br>
 
-                    <label for="type" class="type_label">Type of Incident:</label></br>
-                    <select name="type" id="type" required> <!-- ***************Introduce OnChange******************** -->
-                        <option value="none">Select a type of Incident</option>
-                        <option value="break_bank">Bank Broken</option>
-                        <option value="shit_rubish">Rubish on the street</option>
+                    <label for="incident_type" class="type_label">Type of Incident:</label></br>
+                    <select name="incident_type" id="incident_type" required>
                     </select>
                 </div>
                 <div id="right" class="right">
                     <label for="desc" class="desc_label">Description:</label></br>
                     <textarea rows="4" cols="50" name="desc" id="desc" placeholder="Explain us the incident..."></textarea></br>
 
-                    <label for="img" class="img">Image:</label></br>
-                    <button type="button" id="img" class="img_bttn">Search</button>
-                    <input type="text" name="img" id="img" maxlength="100" placeholder="No image selected..." ><br><br>
-                    <button type="button" id="create" class="button_create" onclick="send_form(this.form)"> CREATE </button> <!-- button: Create -->
+                    <!-- <label for="img" class="img">Image:</label></br> -->
+                    <input type="file" name="img[]" accept="image/*" id="img_input" class="img_input" data-multiple-caption="{count} files selected" multiple>
+                    <label for="img"><figure><svg xmlns="http://www.w3.org/2000/svg" width="20" height="17" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"/></svg></figure> <span>Choose an Image:&hellip;</span></label>
+                    <input type="file" name="img[]" accept="image/*" id="img_input" class="img_input" data-multiple-caption="{count} files selected" multiple>
+                    <button type="button" id="create" class="button_create" onclick="send_create(this.form);set_geometry(this.form)"> CREATE </button> <!-- button: Create -->
                 </div><br>
             </form>
         </section>

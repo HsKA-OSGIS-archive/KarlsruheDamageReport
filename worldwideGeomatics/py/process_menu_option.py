@@ -10,7 +10,9 @@ from templates import templates
 from templates import formulars
 from templates.templates import start_general_section, create_map, create_section_table, close_general_section
 from py import conexion
-
+import sys
+sys.path.append(r"D:\LiClipse\plugins\org.python.pydev_3.9.2.201502042042\pysrc")
+#import pydevd
 def process_menu_option(environ, oConnexion):
     """
     This function studies the option of the menu that has been chosen and
@@ -18,7 +20,7 @@ def process_menu_option(environ, oConnexion):
     The first time returns the complete page but the rest it only changes
     the section that should be inserted in the document using Ajax
     """
-    
+    #pydevd.settrace()
     d=wwfunctions.return_dict_get(environ)
     application=d.get('application',[''])[0] #Returns [''] if there's no key
     #that means is the first time that it's executed
@@ -71,11 +73,12 @@ def process_menu_option(environ, oConnexion):
         if oConnexion.user_type=="Administrator":
             start_general=start_general_section()
             edit=formulars.create_edit()
+            search=formulars.create_search()
             tables="""
             <section id='tables' class='tables' style="display:none;"></section>
             """
             close_general=close_general_section()
-            html=start_general+edit+tables+close_general
+            html=start_general+edit+search+tables+close_general
             
         elif oConnexion.conn==False:
             tit="<h1>You have to be logged as Administrator to access this section</h1>"
@@ -110,6 +113,18 @@ def process_menu_option(environ, oConnexion):
         register=formulars.create_register()
         close_general=close_general_section()
         html=start_general+register+close_general
+        
+    elif application=="web":
+        """
+        Returns the manualhome page
+        """
+        start_general=start_general_section()
+        manual=templates.create_section_manual()
+        tables="""
+            <section id='tables' class='tables' style="display:none;"></section>
+            """
+        close_general=close_general_section()
+        html=start_general+manual+tables+close_general
         
     else:
         start_general=start_general_section()
