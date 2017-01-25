@@ -65,6 +65,8 @@ Repo for Worldwide Geomatics
 
 ********************* GEOSERVER ************************ 
 
-1º - Copy content of Styles folder in Geoserver, which contains the icons in png format and custom patterns for the polygons
+1º - Install geoserver, you can download it from http://geoserver.org/
 
-2º - Copy the KarlsruheDamageReport folder inside your Geoserver/data_dir/workspaces
+2º - Copy content of Styles folder in Geoserver, which contains the icons in png format and custom patterns for the polygons. You can find this file in our configuration_help folder located in our github.
+
+2º - Copy the KarlsruheDamageReport folder inside your Geoserver/data_dir/workspaces. You can find this file in our configuration_help folder located in our github.
