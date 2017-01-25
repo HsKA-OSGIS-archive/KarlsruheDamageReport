@@ -3,8 +3,7 @@ Repo for Worldwide Geomatics
 
 **************** INSTALL PROJECT **********************
 
-1º Download and install the ms4w folder from: http://ms4w.com/
-	Now, you have to place the ms4w folder into your C:/ where Apache folder is into this one.
+1º Download and install ms4w 3.0.6 into C:/. You can find this file in our configuration_help folder located in our github.
 
 2º Open the file "httpd.conf", located inside of C:\ms4w\Apache\conf and <IfModule dir_module> has to be like this:
 
@@ -17,7 +16,7 @@ Repo for Worldwide Geomatics
 	#Handler of scripts wsgi
 	AddHandler wsgi-script .wsgi
 
-4º Add into this folder "C:\ms4w\Apache\modules" the file "mod_wsgi.so". You can find this file in our configuration_help folder located in our github
+4º Add into this folder "C:\ms4w\Apache\modules" the file "mod_wsgi.so". You can find this file in our configuration_help folder located in our github.
 
 5º Continuing into the "httpd.conf" file; add these lines after the last LoadModule:
 
@@ -58,9 +57,9 @@ Repo for Worldwide Geomatics
 
 ****************DATABASE CONFIGURATION*****************
 
-1º Install postgresql with postGIS extension in you computer (for example v.5.5)
+1º Install postgresql with postGIS extension in you computer (for example v.5.5).
 
-2º Open pgAdminIII and create a new database named "karlsruhedamagereport" (IMPORTANT: name must be the same)
+2º Open pgAdminIII and create a new database named "karlsruhedamagereport" (IMPORTANT: name must be the same).
 
 3º Restore the database created with "karlsruhedamagereport.backup". You can find this file in our configuration_help folder located in our github.
 
