@@ -1,0 +1,15 @@
+<layer>
+  <name>reportspolygons</name>
+  <id>LayerInfoImpl--2122a19a:159214e8a9e:-7ff8</id>
+  <type>VECTOR</type>
+  <defaultStyle>
+    <id>StyleInfoImpl--38ce1760:159d0e49772:-7ff9</id>
+  </defaultStyle>
+  <resource class="featureType">
+    <id>FeatureTypeInfoImpl--2122a19a:159214e8a9e:-7ff9</id>
+  </resource>
+  <attribution>
+    <logoWidth>0</logoWidth>
+    <logoHeight>0</logoHeight>
+  </attribution>
+</layer>

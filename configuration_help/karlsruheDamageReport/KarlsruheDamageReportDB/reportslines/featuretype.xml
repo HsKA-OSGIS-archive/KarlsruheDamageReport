@@ -1,0 +1,46 @@
+<featureType>
+  <id>FeatureTypeInfoImpl--2122a19a:159214e8a9e:-7ffc</id>
+  <name>reportslines</name>
+  <nativeName>reportslines</nativeName>
+  <namespace>
+    <id>NamespaceInfoImpl--68d1d564:158b161112f:-7fff</id>
+  </namespace>
+  <title>reportslines</title>
+  <keywords>
+    <string>features</string>
+    <string>reportslines</string>
+  </keywords>
+  <srs>EPSG:4258</srs>
+  <nativeBoundingBox>
+    <minx>8.40141166986557</minx>
+    <maxx>8.40400673105439</maxx>
+    <miny>49.0075877631969</miny>
+    <maxy>49.0101691661689</maxy>
+  </nativeBoundingBox>
+  <latLonBoundingBox>
+    <minx>8.40141166986557</minx>
+    <maxx>8.40400673105439</maxx>
+    <miny>49.00758776226311</miny>
+    <maxy>49.01016916523512</maxy>
+    <crs>GEOGCS[&quot;WGS84(DD)&quot;, &#xd;
+  DATUM[&quot;WGS84&quot;, &#xd;
+    SPHEROID[&quot;WGS84&quot;, 6378137.0, 298.257223563]], &#xd;
+  PRIMEM[&quot;Greenwich&quot;, 0.0], &#xd;
+  UNIT[&quot;degree&quot;, 0.017453292519943295], &#xd;
+  AXIS[&quot;Geodetic longitude&quot;, EAST], &#xd;
+  AXIS[&quot;Geodetic latitude&quot;, NORTH]]</crs>
+  </latLonBoundingBox>
+  <projectionPolicy>FORCE_DECLARED</projectionPolicy>
+  <enabled>true</enabled>
+  <metadata>
+    <entry key="cachingEnabled">false</entry>
+  </metadata>
+  <store class="dataStore">
+    <id>DataStoreInfoImpl--68d1d564:158b161112f:-7ffe</id>
+  </store>
+  <maxFeatures>0</maxFeatures>
+  <numDecimals>0</numDecimals>
+  <overridingServiceSRS>false</overridingServiceSRS>
+  <skipNumberMatched>false</skipNumberMatched>
+  <circularArcPresent>false</circularArcPresent>
+</featureType>
