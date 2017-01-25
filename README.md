@@ -47,11 +47,11 @@ Repo for Worldwide Geomatics
 		Allow from all
 	</Directory>
 
-9º Install psycopg2 using pip (python) in cmd.
+9º Install psycopg2 python library using pip (python) in cmd.
 
 	pip install psycopg2
 
-10º Install beaker using pip (python) in cmd.
+10º Install beaker python library using pip (python) in cmd.
 
 	pip install beaker
 
