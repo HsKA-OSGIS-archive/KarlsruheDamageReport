@@ -1,6 +1,7 @@
 # KarlsruheDamageReport
 Repo for Worldwide Geomatics
 
+
 **************** INSTALL PROJECT **********************
 
 1º Download and install ms4w 3.0.6 into C:/. You can find this file in our configuration_help folder located in our github.
@@ -62,6 +63,7 @@ Repo for Worldwide Geomatics
 2º Open pgAdminIII and create a new database named "karlsruhedamagereport" (IMPORTANT: name must be the same).
 
 3º Restore the database created with "karlsruhedamagereport.backup". You can find this file in our configuration_help folder located in our github.
+
 
 ********************* GEOSERVER ************************ 
 
