@@ -2,7 +2,7 @@
 Repo for Worldwide Geomatics
 
 
-**************** INSTALL PROJECT **********************
+*******************************************************INSTALL PROJECT******************************************************************
 
 1º Download and install ms4w 3.0.6 into C:/. You can find this file in our configuration_help folder located in our github.
 
@@ -56,7 +56,7 @@ Repo for Worldwide Geomatics
 	pip install beaker
 
 
-****************DATABASE CONFIGURATION*****************
+******************************************************DATABASE CONFIGURATION************************************************************
 
 1º Install postgresql with postGIS extension in you computer (for example v.5.5).
 
@@ -65,7 +65,7 @@ Repo for Worldwide Geomatics
 3º Restore the database created with "karlsruhedamagereport.backup". You can find this file in our configuration_help folder located in our github.
 
 
-********************* GEOSERVER ************************ 
+***********************************************************GEOSERVER******************************************************************* 
 
 1º - Install geoserver, you can download it from http://geoserver.org/
 
