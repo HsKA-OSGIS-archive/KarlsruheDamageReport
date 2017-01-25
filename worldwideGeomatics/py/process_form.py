@@ -380,7 +380,7 @@ class process_forms():
             self.email=self.dpost["mail"][0]
         else:
             self.email="empty"
-        values+="'"+self.email+"', "
+        values+="'"+self.email.lower()+"', "
             
         if 'user' in self.dpost.keys():
             self.username=self.dpost["user"][0]
@@ -404,7 +404,7 @@ class process_forms():
         values+="'"+self.typeofuser+"'"
         
         ###********CHECK IF THE USER ALREADY EXISTS ON THE DATABASE***********##
-        where_email="WHERE email='"+self.email+"';"
+        where_email="WHERE email='"+self.email.lower()+"';"
         where_username="WHERE username='"+self.username+"';"
         
         sql_email="SELECT email FROM public.users "+where_email
