@@ -1,6 +1,8 @@
 # KarlsruheDamageReport
 Repo for Worldwide Geomatics
 
+You must have a server that runs WSGI applications, if not, follow the next steps (1 to 8) for installing one.
+
 
 ***********************************************INSTALL PROJECT********************************************************
 
