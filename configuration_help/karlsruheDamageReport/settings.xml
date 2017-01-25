@@ -6,13 +6,11 @@
   </workspace>
   <contact>
     <id>contact</id>
-    <addressCity>Alexandria</addressCity>
     <addressCountry>Egypt</addressCountry>
-    <addressType>Work</addressType>
-    <contactEmail>claudius.ptolomaeus@gmail.com</contactEmail>
-    <contactOrganization>The Ancient Geographers</contactOrganization>
-    <contactPerson>Claudius Ptolomaeus</contactPerson>
-    <contactPosition>Chief Geographer</contactPosition>
+    <contactEmail>adrianupvtopo@gmail.com</contactEmail>
+    <contactOrganization>Worlwide Geomatics</contactOrganization>
+    <contactPerson>Adrián Castelló Martínez</contactPerson>
+    <contactPosition>Admin</contactPosition>
   </contact>
   <charset>UTF-8</charset>
   <numDecimals>8</numDecimals>
