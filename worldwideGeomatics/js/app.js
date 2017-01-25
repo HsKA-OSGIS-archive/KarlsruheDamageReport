@@ -5,12 +5,9 @@ function initialize() {
 }
 
 var url="http://localhost/worldwideGeomatics/"
-<<<<<<< HEAD
 point=false;
 line=false;
 polygon=false;
-=======
->>>>>>> origin/master
 
 function click_menu() {
 	//alert('Click menu: '+this.id);
@@ -28,17 +25,11 @@ function click_menu() {
 	//This changes the map on display or not
 	if (this.id!='home' && this.id!='create' && this.id!='editing') {
 		document.getElementById('sec_map').style.display = 'none';
-<<<<<<< HEAD
 		document.getElementById('sec_legend').style.display = 'none';
 	}
 	else {
 		document.getElementById('sec_map').style.display = 'block';
 		document.getElementById('sec_legend').style.display = 'block';
-=======
-	}
-	else {
-		document.getElementById('sec_map').style.display = 'block';
->>>>>>> origin/master
 	}
 	
 	return false; //Evitar ejecutar el submit del formulario.
@@ -146,10 +137,6 @@ function send_register(f) {
 	} else {
 		pass;
 	}
-<<<<<<< HEAD
-=======
-	
->>>>>>> origin/master
 }
 
 function validateRegister() {
@@ -217,7 +204,6 @@ function create_tables(data) {
 		}
 	}
 	if (response.extension!='null'){
-<<<<<<< HEAD
 		var extension=$.parseJSON(response.extension);
 		zoom(extension.coordinates);
 	}
@@ -302,14 +288,10 @@ function generate_incidents(data) {
 	}
 	if (response.extension!='null'){
 		var extension=$.parseJSON(response.extension);
-=======
-		var extension=$.parseJSON(response.extension)
->>>>>>> origin/master
 		zoom(extension.coordinates);
 	}
 }
 
-<<<<<<< HEAD
 function generate_new_incidents(data) {
 	var response=data;
 	if (response!='null'){
@@ -368,8 +350,6 @@ function zoom_to_type(data) {
 	}
 }
 
-=======
->>>>>>> origin/master
 function check_user(data) {
 	var response=$.parseJSON(data)
 	
@@ -384,7 +364,6 @@ function check_user(data) {
 }
 
 function zoom(bbox) {
-<<<<<<< HEAD
 	if(bbox.length<2){
 		map.getView().fit([bbox[0][0][0],bbox[0][0][1],bbox[0][2][0],bbox[0][2][1]], map.getSize());
 	}
@@ -392,9 +371,6 @@ function zoom(bbox) {
 		map.getView().setCenter([bbox[0],bbox[1]]);
 		map.getView().setZoom(18);
 	}
-=======
-	map.getView().fit([bbox[0][0][0],bbox[0][0][1],bbox[0][2][0],bbox[0][2][1]], map.getSize())
->>>>>>> origin/master
 }
 
 function button_search(f){
@@ -414,7 +390,6 @@ function reset_form(f) {
 	document.getElementById('final_id').style.display = 'none';	
 }
 
-<<<<<<< HEAD
 //**************************** CREATION FORM ***********************************
 function send_create(f) {
 	//Here you don't have the acces to 'this' because the event onClick is launched
@@ -463,6 +438,8 @@ function set_geometry(f){
 	}
 }
 
+
+//**************************** CLICK TABLE ***********************************
 function click_table(value, type){
 	var menu_option=document.getElementsByClassName("active")[0].id
 	var sentence = "name_form=click_table&result="+String(value)+"&type_table="+type+"&menu_option="+menu_option;
@@ -473,14 +450,13 @@ function send_click(sentence) {
 	$.ajax({
 		type: "POST",
 		url: url,
-		//data: $(nombre_form).serialize(), //Adjuntar los campos del formulario enviado.
-		data: sentence, //Otr forma de adjuntarlos
+		data: sentence,
 		success: create_tables,
 		error:function (xhr, ajaxOptions, thrownError) {
 		alert(xhr.status + '\n' + thrownError);
 		}
 		});
-	return false; //Evitar ejecutar el submit del formulario
+	return false; //Avoid to execute the submit of the formular
 }
 
 //**************************** EDDITING FORM ***********************************
@@ -532,8 +508,6 @@ function check_edit(data) {
 		alert(text);
 	}
 }
-=======
->>>>>>> origin/master
 
 $(document).ready(initialize); //Execute the function initialize when the
 //document is completely loaded
