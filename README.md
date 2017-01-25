@@ -69,7 +69,7 @@ You must have a server that runs WSGI applications, if not, follow the next step
 
 *************************************************GEOSERVER********************************************************* 
 
-1º - Install geoserver, you can download it from http://geoserver.org/
+1º - Install geoserver 2.9.0, you can download it from http://geoserver.org/
 
 2º - Copy content of Styles folder in Geoserver/data_dir/styles, which contains the icons in png format and custom patterns for the polygons. You can find this file in our configuration_help folder located in our github.
 
