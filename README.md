@@ -7,17 +7,20 @@ Repo for Worldwide Geomatics
 	Now, you have to have the ms4w folder into your C:/ where Apache folder is into this one.
 
 2º Open the file "httpd.conf", located inside of C:\ms4w\Apache\conf and <IfModule dir_module> has to be like this:
+
 	<IfModule dir_module>
     		DirectoryIndex index.html index.html.var index.php index.phtml index.php3 index.cgi index.wsgi
 	</IfModule>
 
 3º Add also this lines into "httpd.conf":
+
 	#Handler of scripts wsgi
 	AddHandler wsgi-script .wsgi
 
 4º Add into this folder "C:\ms4w\Apache\modules" the file "mod_wsgi.so". You can find this file in our configuration_help folder located in our github
 
 5º Continuing into the "httpd.conf" file, add these lines after the last LoadModule:
+
 	#Load wsgi Module
 	LoadModule wsgi_module modules/mod_wsgi.so
 
