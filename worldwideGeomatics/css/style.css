@@ -8,7 +8,10 @@
 h1 {
 	font: bold 24px verdana, sans-serif;
 	margin-top: 20px;
+<<<<<<< HEAD
 	margin-left: 2%;
+=======
+>>>>>>> origin/master
 }
 
 header, section, aside, footer, nav, figure {
@@ -121,10 +124,17 @@ body {
 .sec_map {
 	border-radius: 1em;
 	background-color: #E6E6E6;
+<<<<<<< HEAD
 	padding-left: 0.5%;
 	padding-right: 0.5%;
 	float: left;
 	width: 75%;
+=======
+	padding-left: 1%;
+	padding-right: 1%;
+	float: left;
+	width: 100%;
+>>>>>>> origin/master
 	height: 500px;
 	margin-top: 15px;
 	margin-bottom: 10px;
@@ -199,6 +209,7 @@ table tr:active {
 
 /******************** ASIDE ************************/
 aside {
+<<<<<<< HEAD
 	display: inline-block;
 	border-radius: 1em;
 	padding-left: 0.5%;
@@ -210,11 +221,24 @@ aside {
     margin-bottom: 10px;
     margin-left: 1%;
 	background: #E6E6E6;
+=======
+	border-radius: 1em;
+	float: right;
+	width: 20%;
+	height: 100%;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	background: #d5d1e8;
+>>>>>>> origin/master
 	box-shadow: 0px 3px 10px #b5c1c5, 0 0 0 0px #d5d1e8 inset;
 }
 
 aside h1 {
 	font: bold 22px verdana, sans-serif;
+<<<<<<< HEAD
 	text-align: center;
 }
 
@@ -236,6 +260,9 @@ aside h2 {
     margin-top: 1%;
     margin-left: 10%;
     margin-right: 1%;
+=======
+	text-align: left;
+>>>>>>> origin/master
 }
 
 aside ul {
@@ -268,6 +295,7 @@ aside ul li a:active {
 
 /************************ FOOTER ****************************/
 footer {
+<<<<<<< HEAD
     clear: both; /*very important*/
     /* for capital letters: text-transform: uppercase; */
     display: inline-block;
@@ -310,13 +338,63 @@ footer .logo {
     height: auto;
 }
 
+=======
+	clear: both; /*very important*/
+	/* for capital letters: text-transform: uppercase; */
+	width: 100%;
+	text-align: right;
+	padding: 10px;
+	border-radius: 1em;
+	background: #d5d1e8;
+	box-shadow: 0px 3px 10px #b5c1c5, 0 0 0 0px #d5d1e8 inset;
+}
+
+footer h1 {
+	text-align: center;
+	font: bold 22px verdana, sans-serif;
+}
+
+footer .figure {
+	text-align: left;
+	width: 50%;
+}
+
+footer .figure li {
+	list-style: none;
+	display: inline-block;
+	padding-top: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: left;
+}
+
+.info {
+	display: block;
+	list-style: none;
+	width: 50%;
+	float: right;
+}
+
+.logo {
+	width: 150px;
+	float: left;
+}
+
+
+>>>>>>> origin/master
 /************************ FORMULAR STYLE *******************************/
 .form_section {
 	margin-top: 25px;
 	margin-bottom: 25px;
 	border-radius: 1em;
 	background-color: #E6E6E6;
+<<<<<<< HEAD
 	padding: 10px;
+=======
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-bottom: 1%;
+>>>>>>> origin/master
 	float: left;
 	width: 100%;
 	box-shadow: 0px 3px 10px #B5C1C5, 0 0 0 0px #EEF5F7 inset;
@@ -472,6 +550,7 @@ form div {
 	font: 18px verdana, sans-serif;
 }
 
+<<<<<<< HEAD
 .img_input {
     opacity: 0;
     overflow: hidden;
@@ -550,6 +629,8 @@ form div {
     fill: #f1e5e6;
 }
 
+=======
+>>>>>>> origin/master
 /**************** REGISTRATION FORM *********************/
 .register_form input {
 	background-position: right;
