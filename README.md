@@ -2,6 +2,7 @@
 Repo for Worldwide Geomatics
 
 **************** INSTALL PROJECT **********************
+
 1º Download and install the ms4w folder from: http://ms4w.com/
 	Now, you have to have the ms4w folder into your C:/ where Apache folder is into this one.
 
@@ -23,7 +24,9 @@ Repo for Worldwide Geomatics
 6º Create a new folder named "desweb" into "C:\ms4w\apps" and copy the project folder "worldwideGeomatics" into "C:\ms4w\apps\desweb".
 
 7º Create a new file named "httpd_worldwideGeomatics.conf" into "C:\ms4w\httpd.d" and add next lines inside:
+
 	WSGIScriptAlias "/worldwideGeomatics/" "C:/ms4w/apps/desweb/worldwideGeomatics/index.py"
+	
 	<Directory "C:/ms4w/apps/desweb/worldwideGeomatics/">
 	  AllowOverride None
 	  Order deny,allow
@@ -31,6 +34,7 @@ Repo for Worldwide Geomatics
 	</Directory>
 
 8º Create a new file named "httpd_desweb.conf" into "C:\ms4w\httpd.d" and add next lines inside:
+
 	alias "/desweb/" "C:/ms4w/apps/desweb/"
 
 	<Directory "C:/ms4w/apps/desweb">
@@ -46,6 +50,7 @@ Repo for Worldwide Geomatics
 
 
 ****************DATABASE CONFIGURATION*****************
+
 1º Install postgresql with postGis extension in you computer (for example v.5.5)
 
 2º Open pgAdminIII and create a new database named "karlsruhedamagereport" (IMPORTANT: name must be the same)
